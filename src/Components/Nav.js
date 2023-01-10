@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 function Nav() {
   return (
-    <nav className="font-apple w-full flex justify-between items-center px-12 py-6 font-semibold">
+    <nav className="font-apple w-full flex justify-between items-center px-16 pt-14 font-semibold absolute text-white">
       <div className="flex items-center gap-2">
         <Logo />
         <div>Apple Store</div>

@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       fontFamily: {
         "apple": ["Helvetica Neue", "sans-serif"]
+      },
+      backgroundImage: {
+        "main": "url('./img/background.jpg')"
       }
     },
   },

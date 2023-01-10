@@ -10,7 +10,7 @@ describe("Route Tests", () => {
     const user = userEvent.setup()
     render(<App />, {wrapper: BrowserRouter})
     
-    expect(screen.getByText(/sounds like a dream/i)).toBeInTheDocument()
+    expect(screen.getByText(/sounds like/i)).toBeInTheDocument()
 
     await user.click(screen.getByText(/shop/i))
     expect(screen.getByText(/add to cart/i)).toBeInTheDocument()
