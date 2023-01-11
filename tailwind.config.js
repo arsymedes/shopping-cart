@@ -10,7 +10,10 @@ module.exports = {
       },
       backgroundImage: {
         "main": "url('./img/background.jpg')"
-      }
+      },
+      gridTemplateColumns: {
+        'dynamic': 'repeat(auto-fill, minmax(min(20rem, 100%), 1fr))'
+        }
     },
   },
   plugins: [

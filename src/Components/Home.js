@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -11,7 +12,7 @@ function Home() {
         <p className="font-light text-center w-3/4 sm:max-w-xl relative bottom-6">
           Introducing Iphone 14 Pro Max A magical new way to interact with iPhone. Groundbreaking safety features designed to save lives. An innovative 48MP camera for mind-blowing detail. All powered by the ultimate smartphone chip. 
         </p>
-        <button className="text-zinc-600 px-6 py-3 rounded-3xl bg-gradient-to-r from-[#bbdfff] to-[#e7afb1] hover:text-white hover:outline hover:outline-white hover:outline-2 hover:bg-none transition ease-in-out duration-500">Buy Now</button>
+        <Link to="product/iPhone-14-Pro-Max"><button className="text-zinc-600 px-6 py-3 rounded-3xl bg-gradient-to-r from-[#bbdfff] to-[#e7afb1] hover:text-white hover:outline hover:outline-white hover:outline-2 hover:bg-none transition ease-in-out duration-500">Buy Now</button></Link>
       </main>
     </div>
   )
