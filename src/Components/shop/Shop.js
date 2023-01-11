@@ -1,20 +1,22 @@
 import React from "react";
 import products from "../Products";
 import ShopItem from "./ShopItem";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function Shop() {
+  const device = useParams().device
+
   function iterator() {
-    const items = Object.values(products).map((key, index) => (
+    const items = Object.values(products).filter((el) => !device || el.type === device).map((key) => (
       <ShopItem item={key} />
     ));
     return items;
   }
 
   return (
-    <div className="flex pt-36 pb-12 px-8 sm:px-24 gap-6 sm:gap-12 scrollbar-thin scrollbar-track-white scrollbar-thumb-black">
+    <div className="grid grid-cols-[1fr_3fr] pt-36 pb-12 px-8 sm:px-24 gap-6 sm:gap-12 scrollbar-thin scrollbar-track-white scrollbar-thumb-black">
       <aside className="flex flex-col gap-28">
-        <h1 className="font-semibold text-5xl">All Products</h1>
+        <h1 className="font-semibold text-5xl">{device || "All Products"}</h1>
         <ul className="font-semibold text-slate-700 text-3xl flex flex-col gap-3">
           <Link to="/shop/iPhone">
             <li className="relative group">

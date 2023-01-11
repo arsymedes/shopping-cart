@@ -5,7 +5,7 @@ function ShopItem(props) {
   const { item } = props
 
   return (
-    <Link to={`/shop/${item.path}`}>
+    <Link to={`/product/${item.path}`}>
       <li className="sm:w-80 hover:scale-105 transition ease-in-out duration-100" data-testid="productName">
         <div className="h-80 flex items-center bg-white"><img src={item.location} alt={item.name} /></div>
         <h3 className="text-xl mt-4 font-semibold">{item.name}</h3>
