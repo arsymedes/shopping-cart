@@ -3,13 +3,15 @@ function importAll(r) {
   r.keys().forEach((item, index) => {
     const clean = item.replace("./", "").split(";")
     const productType = clean[0]
-    const title = clean[1]
+    const name = clean[1]
     const price = clean[2].split(".")[0]
-    images[title] = {
-      name: title,
+    const path = name.replace(/ /g, "-")
+    images[name] = {
+      name: name,
       type: productType,
       price: price,
-      location: r(item)
+      location: r(item),
+      path: path,
     };
   });
   return images;
