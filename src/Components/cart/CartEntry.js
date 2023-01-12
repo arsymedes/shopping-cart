@@ -3,8 +3,21 @@ import Plus from "./Plus";
 import Minus from "./Minus";
 import products from "../Products";
 
-function CartEntry() {
-  const product = products["iPhone-14-Pro-Max"];
+function CartEntry(props) {
+  const { item, setPurchases} = props
+
+  const product = products[item[0]];
+
+  function handleInputChange(event) {
+    let value = event.target.value
+    if (value === "") {value = 0}
+
+    setPurchases((prevState) => ({
+      ...prevState,
+      [item[0]]: value
+    }))
+  }
+
   return (
     <li className="grid grid-cols-[100px_1fr_50px] sm:grid-cols-[175px_1fr_50px] sm:gap-5 py-6 border-b-2">
       <img src={product.location} alt="" />
@@ -21,8 +34,10 @@ function CartEntry() {
               <Minus />
             </button>
             <input
-              className="w-6 h-6 text-2xl sm:w-8 text-center font-semibold outline outline-1 outline-slate-400 rounded-sm"
+              className="w-6 h-6 py-2 sm:w-8 text-center font-semibold outline outline-1 outline-slate-400 rounded-sm"
               type="text"
+              value={item[1]}
+              onChange={handleInputChange}
             />
             <button>
               <Plus />

@@ -8,12 +8,12 @@ function RightArrow() {
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
-      enable-background="new 0 0 32 32"
+      enableBackground="new 0 0 32 32"
     >
       <line
         stroke="currentColor"
-        stroke-width="2"
-        stroke-miterlimit="10"
+        strokeWidth="2"
+        strokeMiterlimit="10"
         x1="26"
         y1="16"
         x2="4"
@@ -22,8 +22,8 @@ function RightArrow() {
       <polyline
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-miterlimit="10"
+        strokeWidth="2"
+        strokeMiterlimit="10"
         points="18,7.5 26.5,16 18,24.5 "
       />
     </svg>

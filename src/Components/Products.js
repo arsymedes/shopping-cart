@@ -1,6 +1,5 @@
 function importAll(r) {
   let images = {};
-  console.log(r.keys());
   r.keys().forEach((item) => {
     const clean = item.replace("./", "").split(";")
     const productType = clean[0]
