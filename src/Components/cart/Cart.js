@@ -7,8 +7,22 @@ function Cart(props) {
 
   function iterator() {
     return Object.entries(purchases).map((el) => (
-      <CartEntry item={el} setPurchases={setPurchases} />
+      <CartEntry key={el[0]} item={el} setPurchases={setPurchases} />
     ));
+  }
+
+  function htmlPurchases() {
+    const belanjaan = iterator()
+    if (belanjaan.length !== 0) {
+      return <ul className="flex flex-col sm:gap-6 mb-20">{belanjaan}</ul>
+    }
+    return (
+      <div className="text-3xl mt-12 text-center text-zinc-300 flex flex-col gap-4">
+        <p>What are you waiting for?</p>
+        <p>Go buy our products!</p>
+      </div>
+    )
+
   }
 
   function subtotal() {
@@ -19,9 +33,9 @@ function Cart(props) {
   }
 
   return (
-    <main className="flex flex-col pt-36 px-8 sm:px-24 gap-6 sm:gap-12 scrollbar-thin scrollbar-track-white scrollbar-thumb-black">
+    <main className="flex flex-col pt-36 px-8 sm:px-24 gap-6 sm:gap-12">
       <h1 className="text-3xl sm:text-5xl font-semibold">Shopping Cart</h1>
-      <ul className="flex flex-col sm:gap-6 mb-20">{iterator()}</ul>
+      {htmlPurchases()}
       <div className="text-xl border-t-2 border-black sm:text-3xl font-bold fixed bottom-0 left-0 h-20 w-screen flex justify-end items-center px-8 sm:px-24 bg-white">
         <div>Subtotal (2 Items): ${subtotal()}.00</div>
       </div>

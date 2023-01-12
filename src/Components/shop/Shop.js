@@ -8,7 +8,7 @@ function Shop() {
 
   function iterator() {
     const items = Object.values(products).filter((el) => !device || el.type === device).map((key) => (
-      <ShopItem item={key} />
+      <ShopItem key={key.name} item={key} />
     ));
     return items;
   }

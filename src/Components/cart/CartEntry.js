@@ -10,12 +10,38 @@ function CartEntry(props) {
 
   function handleInputChange(event) {
     let value = event.target.value
+    const key = event.nativeEvent.data
+    if (value === 0) {value = key}
     if (value === "") {value = 0}
 
+    if (!isNaN(+key)) {
+      setPurchases((prevState) => ({
+        ...prevState,
+        [item[0]]: +value,
+      }))
+    }
+  }
+
+  function addCart() {
     setPurchases((prevState) => ({
       ...prevState,
-      [item[0]]: value
+      [item[0]]: prevState[item[0]] + 1,
     }))
+  }
+
+  function minusCart() {
+    setPurchases((prevState) => ({
+      ...prevState,
+      [item[0]]: ((prevState[item[0]] - 1) < 0 ? 0 : prevState[item[0]] - 1),
+    }))
+  }
+
+  function removeItem() {
+    setPurchases((prevState) => {
+      const copy = {...prevState}
+      delete copy[item[0]]
+      return copy
+    })
   }
 
   return (
@@ -30,7 +56,7 @@ function CartEntry(props) {
         </div>
         <div className="flex gap-2 sm:gap-8 items-center">
           <div className="flex gap-2">
-            <button>
+            <button onClick={minusCart}>
               <Minus />
             </button>
             <input
@@ -39,11 +65,11 @@ function CartEntry(props) {
               value={item[1]}
               onChange={handleInputChange}
             />
-            <button>
+            <button onClick={addCart}>
               <Plus />
             </button>
           </div>
-          <button className="text-[#e31312] w-6 sm:w-auto text-center text-sm sm:text-md font-semibold border-l-2 pl-2 sm:pl-10">
+          <button onClick={removeItem} className="text-[#e31312] w-6 sm:w-auto text-center text-sm sm:text-md font-semibold border-l-2 pl-2 sm:pl-10">
             Remove Item
           </button>
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import products from "../Products";
 import RightArrow from "./RightArrow";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 function Product(props) {
   const gadget = useParams().gadget;
@@ -30,10 +30,12 @@ function Product(props) {
           </h2>
         </div>
         <div className="flex items-center gap-12">
-          <button className="flex gap-2 py-2 items-center font-semibold text-xl text-[#147CE5] px-4 rounded-3xl hover:bg-[#147CE5] hover:text-white transition ease-in-out duration-200">
-            <RightArrow />
-            <div>Buy Now</div>
-          </button>
+          <Link to="/cart">
+            <button onClick={handleAddCart} className="flex gap-2 py-2 items-center font-semibold text-xl text-[#147CE5] px-4 rounded-3xl hover:bg-[#147CE5] hover:text-white transition ease-in-out duration-200">
+              <RightArrow />
+              <div>Buy Now</div>
+            </button>
+          </Link>
           <button onClick={handleAddCart} className="w-36 h-12 font-semibold text-lg outline outline-black rounded-3xl hover:bg-slate-800 hover:text-white transition ease-in-out duration-200">
             Add to Cart
           </button>

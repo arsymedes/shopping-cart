@@ -8,15 +8,12 @@ import Product from "./Components/product/Product";
 import React, { useState } from "react";
 
 function App() {
-  const [purchases, setPurchases] = useState({
-    "Apple-Watch-SE": 2,
-    "Macbook-Pro": 1,
-  });
+  const [purchases, setPurchases] = useState({});
 
   return (
     <BrowserRouter>
       <div className="relative h-screen scrollbar-thin scrollbar-track-white scrollbar-thumb-black">
-        <Nav />
+        <Nav qty={Object.values(purchases).reduce((total, el) => total + el, 0)} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop/" element={<Shop />} />
