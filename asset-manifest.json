@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.b99ad855.css",
+    "main.js": "/shopping-cart/static/js/main.16cfeeba.js",
+    "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/background.jpg": "/shopping-cart/static/media/background.899b02a5b96af887adf9.jpg",
+    "static/media/iPad;iPad Pro;799.png": "/shopping-cart/static/media/iPad;iPad Pro;799.12968b3a061cb804f6b0.png",
+    "static/media/Watch;Apple Watch Ultra;799.png": "/shopping-cart/static/media/Watch;Apple Watch Ultra;799.5d69da3f8e2bce8a5312.png",
+    "static/media/iPad;iPad 10;449.png": "/shopping-cart/static/media/iPad;iPad 10;449.97de229fda923b31f3b7.png",
+    "static/media/iPhone;iPhone 13;599.png": "/shopping-cart/static/media/iPhone;iPhone 13;599.c04aea55b6631347da22.png",
+    "static/media/iPhone;iPhone 14;799.png": "/shopping-cart/static/media/iPhone;iPhone 14;799.e8d964661630cd4af6c3.png",
+    "static/media/iPhone;iPhone 14 Pro Max;1199.png": "/shopping-cart/static/media/iPhone;iPhone 14 Pro Max;1199.33d1e5adc2ca22494a8e.png",
+    "static/media/Mac;iMac;1299.png": "/shopping-cart/static/media/Mac;iMac;1299.8e82f650bfdb6b5898db.png",
+    "static/media/Mac;Macbook Air;1199.png": "/shopping-cart/static/media/Mac;Macbook Air;1199.cae7d5912f0227be264e.png",
+    "static/media/Watch;Apple Watch SE;249.png": "/shopping-cart/static/media/Watch;Apple Watch SE;249.c7a44adadce2b4dadcdf.png",
+    "static/media/Mac;Macbook Pro;1999.png": "/shopping-cart/static/media/Mac;Macbook Pro;1999.c88a695ccd182e247e98.png",
+    "static/media/Watch;Apple Watch Series 8;399.jfif": "/shopping-cart/static/media/Watch;Apple Watch Series 8;399.87962c25dd8ec32e82d6.jfif",
+    "static/media/iPad;iPad Air;599.jfif": "/shopping-cart/static/media/iPad;iPad Air;599.e634865023640eb53096.jfif",
+    "index.html": "/shopping-cart/index.html",
+    "main.b99ad855.css.map": "/shopping-cart/static/css/main.b99ad855.css.map",
+    "main.16cfeeba.js.map": "/shopping-cart/static/js/main.16cfeeba.js.map",
+    "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b99ad855.css",
+    "static/js/main.16cfeeba.js"
+  ]
+}
