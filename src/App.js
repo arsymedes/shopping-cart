@@ -11,7 +11,7 @@ function App() {
   const [purchases, setPurchases] = useState({});
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="relative h-screen scrollbar-thin scrollbar-track-white scrollbar-thumb-black">
         <Nav qty={Object.values(purchases).reduce((total, el) => total + el, 0)} />
         <Routes>
@@ -30,7 +30,7 @@ function App() {
           />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
